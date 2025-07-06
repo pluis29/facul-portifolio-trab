@@ -1,0 +1,190 @@
+/* Estilos de reset básico e configurações para o corpo da página. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos para a barra de navegação. */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky; /* Mantém a navegação fixa no topo ao rolar. */
+    top: 0;
+    z-index: 1000; /* Garante que a nav fique sobre outros elementos. */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Layout dos links de navegação. */
+.navbar nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilos dos botões de navegação. */
+.nav-link {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilo para o link de navegação ativo. */
+.nav-link.active-nav {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+/* Estilos para a área principal de conteúdo. */
+.content-area {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Estilos para as seções de conteúdo. */
+.content-section {
+    display: none; /* Seções são escondidas por padrão e exibidas via JavaScript. */
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+/* Remove a borda superior da primeira seção. */
+.content-section:first-child {
+    border-top: none;
+}
+
+/* Torna a seção visível quando ativa. */
+.content-section.active {
+    display: block;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 25px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Ajuste de margem para h3 dentro da seção de formação. */
+#education h3 {
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
+/* Estilos para itens do portfólio. */
+.portfolio-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Estilos para links dentro dos itens do portfólio. */
+.portfolio-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para grupos de formulário. */
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* Estilos para rótulos de formulário. */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para campos de input e textarea. */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Calcula largura total considerando padding e borda. */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Permite redimensionamento vertical para a área de texto. */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Estilos para o botão de envio do formulário. */
+form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Ajustes responsivos para telas menores. */
+@media (max-width: 768px) {
+    /* Altera a navegação para um layout de coluna. */
+    .navbar nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Ajusta a largura dos links de navegação em telas menores. */
+    .nav-link {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    /* Ajusta margens e padding da área de conteúdo. */
+    .content-area {
+        margin: 1rem 10px;
+        padding: 1rem;
+    }
+}
